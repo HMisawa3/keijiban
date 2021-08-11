@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-       //
+
     }
 
     /**
@@ -36,7 +36,13 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post;
+        $post -> theme_id  = $request -> theme_id;
+        $post -> post      = $request -> post;
+        $post -> visitor   = \Request::ip();
+        $post -> save();
+
+        return redirect('/');
     }
 
     /**
@@ -83,16 +89,4 @@ class PostController extends Controller
     {
         //
     }
-
-    public function getAllMessage(Request $request) {
-
-        $list = DB::select(
-            "select post, created_at from posts order by created_at asc"
-        );
-    
-        return response()->json(['tasks' => $list]);
-    }
-    
-    
-    
 }

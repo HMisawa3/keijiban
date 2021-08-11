@@ -8,13 +8,17 @@ use Illuminate\Http\Request;
 class ThemeController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
+     * トップ画面表示
+     *　- $themeは常に最新のIDのお題を抽出（1件のみ）
+     *  - $postsは$themeに紐づいている投稿を全て抽出
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+       $theme  = Theme::orderBy('id','desc')->first();
+       $posts  = $theme -> posts() ->get();
+
+       return view('theme.index',compact('theme','posts'));
     }
 
     /**

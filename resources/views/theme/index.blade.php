@@ -10,6 +10,31 @@
     <title>掲示板</title>
 </head>
 <body>
+<!-- お題 -->
+<div class="card">
+  <div class="card-body mx-auto">
+　　　【本日のお題はこちら→→→】{{ $theme ->title }}
+  </div>
+</div>
+<!-- 投稿フォーム -->
+<form method="POST" action="{{ route('post.store')}}">
+{{ csrf_field() }}
+  <div class="form-group row mr-2 ml-2">
+    <input class="form-control col-11" type="text" placeholder="〇〇字以内で入力して下さい" name="post" required>
+    <button type="submit" class="btn btn-primary col-1" name="theme_id" value="{{ $theme ->id }}">投稿</button>
+  </div>
+</form>
+<!-- お題に対するコメント -->
+@foreach($posts as $post)
+<div class="media-body">
+    <div class="media mt-3">
+        <div class="media-body mt-2 mr-3 ml-3">
+           {{ $post-> post }}
+        </div>
+    </div>
+</div>
+@endforeach
+
 
 
 

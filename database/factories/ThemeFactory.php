@@ -23,6 +23,7 @@ class ThemeFactory extends Factory
     {
         return [
             //
+            'title'    => $this->faker->realText($maxNbChars = 10)
         ];
     }
 }
