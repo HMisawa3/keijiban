@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Post;
+use App\Models\Theme;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PostFactory extends Factory
@@ -22,6 +23,7 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
+            'theme_id'=> Theme::factory(),
             'visitor' => $this->faker->ipv4,
             'post'    => $this->faker->realText($maxNbChars = 50)
         ];
