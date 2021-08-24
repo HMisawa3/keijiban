@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//プロジェクト詳細画面（トップ画面）
+Route::get('/', [App\Http\Controllers\ThemeController::class, 'index'])->name('theme.index');
+
+//投稿処理
+Route::post('post/store', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
+
+Route::get('/news', [App\Http\Controllers\NewsController::class, 'index'])->name('news.index');
+
