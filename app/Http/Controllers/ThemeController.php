@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7;
+use Carbon\Carbon;
 
 class ThemeController extends Controller
 {
@@ -39,12 +40,21 @@ class ThemeController extends Controller
             }
 
             $data = $news[0]['name'];
-            //既にデータベースにある場合は登録しない
-            if($theme -> title !== $data){
-                $theme = new Theme;
-                $theme -> title  = $data;
-                $theme -> save();
+
+            //ニュースお題の日付(日時→「日にち」のみ表示)
+            $date = $theme->created_at;
+            $date = Carbon::createFromFormat('Y-m-d H:i:s', $theme->created_at)->format('Y-m-d');
+
+            //今日の日付（日にちのみ表示）
+            $today = Carbon::now()->toDateString();
+
+            //まず、一日に一回しか保存できないようにする。
+            if( $date !== $today){
+              $theme = new Theme;
+              $theme -> title  = $data;
+              $theme -> save();
             }
+
 
         } catch (RequestException $e) {
             //For handling exception
