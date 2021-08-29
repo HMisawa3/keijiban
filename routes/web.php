@@ -18,4 +18,3 @@ Route::get('/', [App\Http\Controllers\ThemeController::class, 'index'])->name('t
 
 //投稿処理
 Route::post('post/store', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
-
