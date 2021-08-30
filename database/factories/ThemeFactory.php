@@ -23,7 +23,10 @@ class ThemeFactory extends Factory
     {
         return [
             //
-            'title'    => $this->faker->realText($maxNbChars = 10)
+            'title'    => $this->faker->realText($maxNbChars = 10),
+            'url'      => $this->faker->url,
+            'image'      => $this->faker->imageUrl($width = 640, $height = 480, $category = null, $randomize = true, $word = null, $gray = false),
+            'description'  => $this->faker->realText($maxNbChars = 10)
         ];
     }
 }

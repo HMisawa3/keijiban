@@ -11,15 +11,21 @@
 </head>
 <body>
 <!-- お題 -->
-<div class="card">
-  <div class="card-body mx-auto">
-　　　【本日のお題はこちら→→→】{{ $theme ->title }}
-        @foreach($news as $data)
-        <p>{{$data['url']}}</p>
-        <img src="{{$data['thumbnail']}}">
-        @endforeach
+<div class="card mb-3">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+     <img src="{{ $theme -> image }}" alt="{{ $theme ->title }}" width="400" height="180">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ $theme ->title }}</h5>
+        <p class="card-text">{{ $theme ->description }}</p>
+        <a href="{{ $theme ->url }}" class="btn btn-primary">詳しくはこちら</a>
+      </div>
+    </div>
   </div>
 </div>
+
 <!-- 投稿フォーム -->
 <form method="POST" action="{{ route('post.store')}}">
 {{ csrf_field() }}
@@ -38,12 +44,6 @@
     </div>
 </div>
 @endforeach
-
-
-
-
-
-
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
