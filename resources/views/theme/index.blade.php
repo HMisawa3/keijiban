@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,12 +46,12 @@
 </div>
 @endforeach
 
-<footer class="bg-dark u-content-space-top pb-4" role="footer">
+<footer class="bg-dark u-content-space-top pb-4" role="footer" style="position: fixed; width: 100%; bottom: 0px;">
       <div class="container-fluid">
         <div class="px-md-3">
           <!-- Social Sharing -->
           <div class="text-center">
-          <h2 class="h5 font-weight-light text-white mb-4">Thanx using gazel. We are grad.</h2>
+          <h2 class="h5 font-weight-light text-white mb-4">Thanx for using guzzle. We are grad.</h2>
 
             <div class="d-flex justify-content-center">
               <!-- Facebook Share -->
@@ -81,7 +81,7 @@
         <!-- Copyright and Social Icons -->
         <div class="row px-md-3">
           <div class="col-md-8 text-center text-md-left mb-3 mb-md-0">
-            <small class="text-white">&copy; 2021 <a class="text-white" href="https://htmlstream.com">gazzel</a>. </small>
+            <small class="text-white">&copy; 2021 <a class="text-white" href="https://htmlstream.com">guzzle</a>. </small>
           </div>
 
         </div>
