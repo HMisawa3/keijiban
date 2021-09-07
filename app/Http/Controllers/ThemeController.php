@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Theme;
 use Illuminate\Http\Request;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Psr7;
+use Carbon\Carbon;
 
 class ThemeController extends Controller
 {
@@ -86,4 +90,5 @@ class ThemeController extends Controller
     {
         //
     }
+
 }
