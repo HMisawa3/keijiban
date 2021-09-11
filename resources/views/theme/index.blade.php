@@ -18,13 +18,31 @@
 </div>
 
 <!-- 投稿フォーム -->
-<form method="POST" action="{{ route('post.store')}}">
-{{ csrf_field() }}
   <div class="form-group row mr-2 ml-2">
-    <input class="form-control col-11" type="text" placeholder="〇〇字以内で入力して下さい" name="post" required>
-    <button type="submit" class="btn btn-secondary" name="theme_id" value="{{ $theme ->id }}" >投稿</button>
+    <input id="postInput" class="form-control col-11" type="text" placeholder="〇〇字以内で入力して下さい">
+    <button type="submit" class="btn btn-secondary" data-toggle="modal" data-target="#postModal">投稿</button>
   </div>
-</form>
+  <!-- modal -->
+  <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="modal-post" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">本当に投稿して良いですか？</h5>
+      </div>
+        <div class="modal-body">
+          <form method="POST" action="{{ route('post.store')}}">
+              {{ csrf_field() }}
+                <div class="form-group row mr-2 ml-2">
+                  <input id="modalInput" class="form-control col-11" type="text" placeholder="〇〇字以内で入力して下さい" name="post" required readonly>
+                  <button type="submit" class="btn btn-secondary" name="theme_id" value="{{ $theme ->id }}" data-toggle="modal" data-target="#postModal">問題ない</button>
+                　 <button type="button" class="btn btn-secondary" data-dismiss="modal">撤回する</button>
+                </div>
+          </from>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <!-- お題に対するコメント -->
 @foreach($posts as $post)
 <div class="media-body">
