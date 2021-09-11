@@ -18,7 +18,7 @@ class CreateThemesTable extends Migration
             $table->string('title');
             $table->string('url');
             $table->string('image');
-            $table->string('description');
+            $table->text('description');
             $table->timestamps();
         });
     }
