@@ -12,41 +12,41 @@
     <title>掲示板</title>
 </head>
 <body>
-        <main class="py-4">
-            @yield('content')
-        </main>
+  <header></header>
+  <main class="py-4 mb-5">
+      @yield('content')
+  </main>
+<footer class="bg-dark u-content-space-top pb-4" role="footer" style="width: 100%;  left: 0; bottom: 0px; margin-top: 20px;">
+    <div class="container-fluid">
+      <div class="px-md-3">
+        <!-- Social Sharing -->
+        <div class="text-center">
+        <h3 class="h5 font-weight-light text-white mb-4">Thanx for using guzzle. We are grad.</h3>
 
-        <footer class="bg-dark u-content-space-top pb-4" role="footer" style="position: fixed; width: 100%; bottom: 0px;">
-      <div class="container-fluid">
-        <div class="px-md-3">
-          <!-- Social Sharing -->
-          <div class="text-center">
-          <h3 class="h5 font-weight-light text-white mb-4">Thanx for using guzzle. We are grad.</h3>
-
-            <div class="d-flex justify-content-center">
-              <!-- Facebook Share -->
-              <div class="mr-3 mb-2 mb-md-0">
-                <div class="fb-share-button demo-faceook-share"
-                     data-href="http://facebook.com/htmlstream"
-                     data-layout="button"
-                     data-size="large"
-                     data-mobile-iframe="true">
-                  <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">FacebookShare</a>
-                </div>
+          <div class="d-flex justify-content-center">
+            <!-- Facebook Share -->
+            <!-- <div class="mr-3 mb-2 mb-md-0">
+              <div class="fb-share-button demo-faceook-share"
+                    data-href="http://facebook.com/htmlstream"
+                    data-layout="button"
+                    data-size="large"
+                    data-mobile-iframe="true">
+                <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">FacebookShare</a>
               </div>
-              <!-- End Facebook Share -->
+            </div> -->
+            <!-- End Facebook Share -->
 
-              <!-- Tweet -->
-              <div class="mr-3">
-                <a href="https://twitter.com/intent/tweet" class="twitter-share-button" data-size="large" data-text="Stream UI Kit is beautiful Open Source Bootstrap 4 UI Kit under MIT license." data-hashtags="StreamUIKit, Bootstrap, Freebies" data-related="htmlstream, freebies, bootstrap">Tweet</a>
-              </div>
-              <!-- End Tweet -->
-            </div>
+            <!-- Tweet -->
+            <!-- <div class="mr-3">
+              <a href="https://twitter.com/intent/tweet" class="twitter-share-button" data-size="large" data-text="Stream UI Kit is beautiful Open Source Bootstrap 4 UI Kit under MIT license." data-hashtags="StreamUIKit, Bootstrap, Freebies" data-related="htmlstream, freebies, bootstrap">Tweet</a>
+            </div> -->
+            <!-- End Tweet -->
           </div>
-          <!-- End Social Sharing -->
-          <small class="text-white">&copy; 2021 <a class="text-white" href="https://htmlstream.com">guzzle</a>. </small>
         </div>
+        <!-- End Social Sharing -->
+        <small class="text-white">&copy; 2021 <a class="text-white" href="https://htmlstream.com">guzzle</a>. </small>
       </div>
+    </div>
 </footer>
 
 

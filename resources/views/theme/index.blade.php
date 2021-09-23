@@ -11,7 +11,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ $theme ->title }}</h5>
         <p class="card-text">{{ $theme ->description }}</p>
-        <a href="{{ $theme ->url }}" class="btn btn-secondary">詳しくはこちら</a>
+        <a href="{{ $theme ->url }}" class="btn btn-secondary" target="_blank">詳しくはこちら</a>
       </div>
     </div>
   </div>
@@ -50,6 +50,11 @@
         <div class="media-body mt-2 mr-3 ml-3">
            {{ $post-> post }}
         </div>
+        <div>
+          @if(Auth::check())
+              <a  onclick="return confirm('このカードを削除して良いですか?')" rel="nofollow" data-method="delete" href="{{ route('post.destroy',['id' => $post -> id]) }}">削除</a>
+          @endif
+       </div>
     </div>
 </div>
 @endforeach
