@@ -7,13 +7,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}"><!--トークン-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="{{ asset('/js/script.js') }}"></script>
+    <script src="{{ asset('/css/style.css') }}"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>掲示板</title>
 </head>
 <body>
   <header></header>
-  <main class="py-4 mb-5">
+  <main class="py-4 mb-5" style="width: 100vw;">
       @yield('content')
   </main>
 <footer class="bg-dark u-content-space-top pb-4" role="footer" style="width: 100%;  left: 0; bottom: 0px; margin-top: 20px;">
