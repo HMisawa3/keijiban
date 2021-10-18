@@ -14,8 +14,17 @@ header{
 }
 
 /* お題 */
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.card{
+    height: 300px;
+    width: 100%;
+}
+
 .card-body{
     text-align: center;
     vertical-align: middle;
 }
-
