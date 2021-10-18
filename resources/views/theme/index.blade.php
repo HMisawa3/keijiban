@@ -5,7 +5,7 @@
 <div class="card mb-3">
   <div class="row no-gutters">
     <div class="col-md-4">
-     <img src="{{ $theme -> image }}" alt="{{ $theme ->title }}">
+     <img src="{{ $theme -> image }}" alt="{{ $theme ->title }}" width="100%" height="100%">
     </div>
     <div class="col-md-8">
       <div class="card-body">
