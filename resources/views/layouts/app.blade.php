@@ -7,14 +7,16 @@
     <meta name="csrf-token" content="{{ csrf_token() }}"><!--トークン-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="{{ asset('/js/script.js') }}"></script>
-    <script src="{{ asset('/css/style.css') }}"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     <title>掲示板</title>
 </head>
 <body>
-  <header></header>
-  <main class="py-4 mb-5" style="width: 100vw;">
+  <header>
+    <h1 id="main-title">guzzle borde</h1>
+  </header>
+  <main class="py-4 mb-5" style="height: 100vh; width: 100%;">
       @yield('content')
   </main>
 <footer class="bg-dark u-content-space-top pb-4" role="footer" style="width: 100%;  left: 0; bottom: 0px; margin-top: 20px;">
@@ -22,7 +24,7 @@
       <div class="px-md-3">
         <!-- Social Sharing -->
         <div class="text-center">
-        <h3 class="h5 font-weight-light text-white mb-4">Thanx for using guzzle. We are grad.</h3>
+        <h3 id="footer-title" class="h5 font-weight-light mb-4">Thanx for using guzzle. We are grad.</h3>
 
           <div class="d-flex justify-content-center">
             <!-- Facebook Share -->
@@ -45,7 +47,7 @@
           </div>
         </div>
         <!-- End Social Sharing -->
-        <small class="text-white">&copy; 2021 <a class="text-white" href="https://htmlstream.com">guzzle</a>. </small>
+        <small id="small-title">&copy; 2021 <a class="text-white" href="https://htmlstream.com">guzzle</a>. </small>
       </div>
     </div>
 </footer>

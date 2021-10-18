@@ -1,0 +1,21 @@
+header{
+    background-color:#343a40;
+}
+
+#main-title,
+#footer-title,
+#small-title
+{
+    color:cornsilk;
+}
+
+#main-title{
+    height: 70px;
+}
+
+/* お題 */
+.card-body{
+    text-align: center;
+    vertical-align: middle;
+}
+
