@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Gate;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -85,8 +87,12 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
-        //
+        $user_id = Auth::id();
+        Gate::authorize('admin');
+        $theme = Post::find($id);
+        $theme->delete();
+        return redirect('/');
     }
 }
