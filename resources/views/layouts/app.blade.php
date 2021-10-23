@@ -19,7 +19,7 @@
   <main class="py-4 mb-5" style="height: 100vh; width: 100%;">
       @yield('content')
   </main>
-<footer class="bg-dark u-content-space-top pb-4" role="footer" style="width: 100%;  left: 0; bottom: 0px; margin-top: 20px;">
+<footer class="bg-dark u-content-space-top pb-4" role="footer" style="width: 100%; left: 0; bottom: 0px; margin-top: 20px;">
     <div class="container-fluid">
       <div class="px-md-3">
         <!-- Social Sharing -->

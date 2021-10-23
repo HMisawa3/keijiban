@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="overflow-auto">
+<div class="overflow-auto" style="height: 500px;">
   <h3 class="text-center">利用規約</h3><hr>
   <p class="mr-3 ml-3">
     この利用規約（以下，「本規約」といいます。）は，guzzleがこのウェブサイト上で提供するサービス（以下，「本サービス」といいます。）の利用条件を定めるものです。登録ユーザーの皆さま（以下，「ユーザー」といいます。）には，本規約に従って，本サービスをご利用いただきます。
