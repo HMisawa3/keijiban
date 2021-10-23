@@ -48,13 +48,24 @@
 <div class="media-body">
     <div class="media mt-3">
         <div class="media-body mt-2 mr-3 ml-3">
-           {{ $post-> post }}
+            <table id="comment">
+                <tr>
+                  <th>投稿</th>
+                  <th>投稿時間</th>
+                  @if(Auth::check())
+                  <th></th>
+                  @endif
+                </tr>
+                <tr>
+                  <td>{{ $post-> post }}</td>
+                  <td>{{ $post-> created_at }}</td>
+                  <td>
+                    @if(Auth::check())
+                      <a onclick="return confirm('このカードを削除して良いですか?')" rel="nofollow" data-method="delete" href="{{ route('post.destroy',['id' => $post -> id]) }}">削除</a>
+                    @endif
+                  </td>
+                </tr>
         </div>
-        <div>
-          @if(Auth::check())
-              <a  onclick="return confirm('このカードを削除して良いですか?')" rel="nofollow" data-method="delete" href="{{ route('post.destroy',['id' => $post -> id]) }}">削除</a>
-          @endif
-       </div>
     </div>
 </div>
 @endforeach

@@ -14,7 +14,7 @@
 </head>
 <body>
   <header>
-    <h1 id="main-title">guzzle borde</h1>
+    <h1 id="main-title">guzzle board</h1>
   </header>
   <main class="py-4 mb-5" style="height: 100vh; width: 100%;">
       @yield('content')
@@ -25,25 +25,7 @@
         <!-- Social Sharing -->
         <div class="text-center">
         <h3 id="footer-title" class="h5 font-weight-light mb-4">Thanx for using guzzle. We are grad.</h3>
-
           <div class="d-flex justify-content-center">
-            <!-- Facebook Share -->
-            <!-- <div class="mr-3 mb-2 mb-md-0">
-              <div class="fb-share-button demo-faceook-share"
-                    data-href="http://facebook.com/htmlstream"
-                    data-layout="button"
-                    data-size="large"
-                    data-mobile-iframe="true">
-                <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">FacebookShare</a>
-              </div>
-            </div> -->
-            <!-- End Facebook Share -->
-
-            <!-- Tweet -->
-            <!-- <div class="mr-3">
-              <a href="https://twitter.com/intent/tweet" class="twitter-share-button" data-size="large" data-text="Stream UI Kit is beautiful Open Source Bootstrap 4 UI Kit under MIT license." data-hashtags="StreamUIKit, Bootstrap, Freebies" data-related="htmlstream, freebies, bootstrap">Tweet</a>
-            </div> -->
-            <!-- End Tweet -->
           </div>
         </div>
         <!-- End Social Sharing -->
