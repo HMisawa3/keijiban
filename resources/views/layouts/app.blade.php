@@ -16,8 +16,10 @@
   <header>
     <h1 id="main-title">guzzle board</h1>
   </header>
-  <main class="py-4 mb-5" style="height: 100vh; width: 100%;">
+  <main class="py-4 mb-5" style="height: 100%; width: 100%;">
+
       @yield('content')
+
   </main>
 <footer class="bg-dark u-content-space-top pb-4" role="footer" style="width: 100%; left: 0; bottom: 0px; margin-top: 20px;">
     <div class="container-fluid">
@@ -25,6 +27,7 @@
         <!-- Social Sharing -->
         <div class="text-center">
         <h3 id="footer-title" class="h5 font-weight-light mb-4">Thanx for using guzzle. We are grad.</h3>
+        <a class="about" href="/about">利用規約</a>
           <div class="d-flex justify-content-center">
           </div>
         </div>
