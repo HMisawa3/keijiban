@@ -22,8 +22,8 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot(UrlGenerator $url) //本番環境で投稿機能のセキュリティを回避するため引数追加
+    public function boot()
     {
-        $url->forceScheme('https'); //本番環境で投稿機能のセキュリティを回避するため追加
+        URL::forceSchema('https'); //本番環境で投稿機能のセキュリティを回避するため追加
     }
 }
