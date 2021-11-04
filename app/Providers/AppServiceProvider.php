@@ -24,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        URL::forceSchema('https'); //本番環境で投稿機能のセキュリティを回避するため追加
+        //本番環境で投稿機能のセキュリティを回避するため追加
+        URL::forceScheme('https');
     }
 }
