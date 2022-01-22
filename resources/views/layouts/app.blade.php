@@ -14,26 +14,20 @@
 </head>
 <body>
   <header>
-    <h1 id="main-title">guzzle board</h1>
+    <h1 id="main-title">guzzle board  <span>-1日1つのお題板-</span></h1>
   </header>
   <main class="py-4 mb-5" style="height: 100%; width: 100%;">
 
       @yield('content')
 
   </main>
-<footer class="bg-dark u-content-space-top pb-4" role="footer" style="width: 100%; left: 0; bottom: 0px; margin-top: 20px;">
-    <div class="container-fluid">
-      <div class="px-md-3">
-        <!-- Social Sharing -->
-        <div class="text-center">
-        <h3 id="footer-title" class="h5 font-weight-light mb-4">Thanx for using guzzle. We are grad.</h3>
-        <a class="about" href="/about">利用規約</a>
-          <div class="d-flex justify-content-center">
-          </div>
+<footer class="bg-dark u-content-space-top" role="footer">
+    <div class="container-fluid footer-content">
+        <h3 id="footer-title" class="h4 font-weight-light">Thanx for using guzzle. We are grad.</h3>
+        <div class="footer-detail">
+          <div id="small-title">&copy; 2022 <a class="text-white" href="https://htmlstream.com">guzzle</a>. ＞</div>
+          <div><a class="about" href="/about">このサイトについて </a></div>
         </div>
-        <!-- End Social Sharing -->
-        <small id="small-title">&copy; 2021 <a class="text-white" href="https://htmlstream.com">guzzle</a>. </small>
-      </div>
     </div>
 </footer>
 
